@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    background-color: #EEEDED;
+}
+.bgimage {
+    background-image: url("images/istockphoto-1502846052-612x612.jpg");
+    min-height: 800px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.inputcontainer{
+    width: 90%;
+    display: flex;
+    height: 800px;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.inputfield{
+    width: 40%;
+    margin: 0 auto;
+    padding: 20%;
+}
+.seatcontainer{
+    width: 50%;
+}
+.input {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;
+    width: 150px;
+  }
+  
+  .input:focus {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 13px 13px 100px #969696,
+               -13px -13px 100px #ffffff;
+  }
+  #seatchecker{
+    border: none;
+    background: #0D1282;
+    color: white;
+    padding: 3%;
+    border-radius: 20px;
+  }
+  .deleteItem{
+    border: none;
+    color: #D71313;
+    padding: 1%;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+ #message{
+    margin-top: 25px;
+ }
+ #reserved-seats,#seats-list{
+    margin-top: 10%;
+ }
+
+ @media only screen and (max-width: 600px) {
+    .inputcontainer{
+        flex-direction: column;
+    }
+    .inputfield {
+        width: 100%;
+        padding: 10%;
+    }
+    .seatcontainer{
+        width: 90%;
+    }
+    .bgimage{
+        background-position: 0%;
+    }
+  }

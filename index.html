@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football match seats checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bgimage"></div>
+    <div class="inputcontainer">
+        <div class="inputfield ">
+            <input class="input " type="number" id="seat-number" placeholder="Enter seat number" min="1" max="1100">
+            <button id="seatchecker" onclick="checkSeat()">ստուգել / check</button>
+            <p id="message"></p>
+
+        </div>
+        <div class="seatcontainer">
+            <div id="reserved-seats">
+                <h2>Զբաղված նստատեղեր / reserved seats</h2>
+                <ul id="seats-list"></ul>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+</body>
+
+</html>
