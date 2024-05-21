@@ -87,4 +87,7 @@
     .bgimage{
         background-position: 0%;
     }
+    #seats-list{
+        padding-left: 15px;
+    }
   }
