@@ -49,6 +49,15 @@
     padding: 3%;
     border-radius: 20px;
   }
+  .btn{
+    border: none;
+    background: #0D1282;
+    color: white;
+    padding: 3%;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 100%;
+  }
   .deleteItem{
     border: none;
     color: #D71313;

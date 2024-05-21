@@ -19,7 +19,7 @@ function displayReservedSeats() {
       if (isTaken) {
         const listItem = document.createElement('li');
         listItem.textContent = `Տեղ համար ${index + 1}-ը արդեն զբաղված է `;
-  
+
         // Create a button element
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'X';
@@ -30,23 +30,22 @@ function displayReservedSeats() {
           // Mark the seat as free
           takenSeats[index] = false;
           localStorage.setItem('takenSeats', JSON.stringify(takenSeats));
-  
+
           // Remove the list item from the DOM
           seatsList.removeChild(listItem);
         });
-  
+
         // Append the button to the list item
         listItem.appendChild(deleteButton);
-  
+
         // Append the list item to the seats list
         seatsList.appendChild(listItem);
       }
     });
   }
-  
 
-// Function to check if a seat is taken
-function checkSeat() {
+  // Function to check if a seat is taken
+  function checkSeat() {
     // Get the seat number from the input field
     const seatNumber = parseInt(document.getElementById('seat-number').value);
     const messageElement = document.getElementById('message');
@@ -71,6 +70,17 @@ function checkSeat() {
         displayReservedSeats();
     }
 }
+// Add an event listener to the "սկսել 0-ից" button
+document.getElementById('clearvalues').addEventListener('click', function() {
+    // Set the takenSeats array to a new array of 1100 false values
+    takenSeats = new Array(1100).fill(false);
+    // Clear the seats-list element
+    document.getElementById('seats-list').innerHTML = '';
+    // Clear the message element
+    document.getElementById('message').textContent = '';
+    // Remove the takenSeats item from local storage
+    localStorage.removeItem('takenSeats');
+  });
 var input = document.getElementById("seat-number");
 input.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
@@ -78,3 +88,5 @@ input.addEventListener("keypress", function(event) {
     document.getElementById("seatchecker").click();
   }
 });
+
+displayReservedSeats(); // Call the function to display reserved seats
